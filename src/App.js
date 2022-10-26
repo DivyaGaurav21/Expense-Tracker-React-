@@ -1,10 +1,13 @@
+import React from 'react'
+import ExpenseItem from './components/ExpenseItem'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-    <p>Divya</p>
+    <div>
+      <h1>Let Started</h1>
+    <ExpenseItem/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
