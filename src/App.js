@@ -1,5 +1,6 @@
 import React from 'react'
-import Expenses from './components/Expenses';
+import Expenses from './components/Expenses/Expenses';
+import NewExpense from './components/NewExpense/NewExpense';
 
 const App = () => {
 
@@ -21,17 +22,23 @@ const App = () => {
       title: 'House Rent',
       amount: '32.12',
       date: new Date(2020 , 7, 7)
+    },
+    {
+      id:'e3',
+      title: 'House Rent',
+      amount: '32.12',
+      date: new Date(2019 , 11, 17)
     }
   ];
 
   return (
     <div>
 
-      <h1>Let Started</h1>
+      <NewExpense/>
     <Expenses item={expenses}/>
    
     </div>
   )
 }
 
-export default App
+export default App;
