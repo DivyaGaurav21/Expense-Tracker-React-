@@ -45,7 +45,7 @@ const App = () => {
   const [expenses , setExpenses] = useState(DUMMY_EXPENSES);
 
   return (
-    <div>
+    <div className='app-div'>
 
       <NewExpense onAddExpense = {addExpenseHandler}/>
     <Expenses item={expenses}/>
