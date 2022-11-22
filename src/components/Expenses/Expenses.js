@@ -15,11 +15,17 @@ const Expenses = (props) => {
     return expense.date.getFullYear().toString() === filterdYear;
   });
 
-  let expensesContent = <p>No Expenses Found!!</p>;
+  let expensesContent = <p 
+  style={{
+    color:'white' , 
+    'font-size':'25px',
+    'text-align':'center'
+  }}>No Expenses Found!!</p>;
+
   if (filteredExpenses.length > 0) {
     expensesContent = filteredExpenses.map((expense) =>
       <ExpenseItem
-        key={Math.random() * 10000}
+        key={expense.id}
         title={expense.title}
         amount={expense.amount}
         date={expense.date}
